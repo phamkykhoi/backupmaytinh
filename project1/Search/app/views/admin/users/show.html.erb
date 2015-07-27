@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-2">
+    <p>
+      <%= image_tag @user.avatar.url, width: "100" if @user.avatar %>
+      <div><%= @user.fullname %></div>
+    </p>
+  </div>
+  <div class="col-md-8">
+    <h3>Activities</h3>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module Admin::BanSubtotalsHelper
+end

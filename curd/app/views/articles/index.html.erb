@@ -1,0 +1,22 @@
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'articles' %>
+
+<table width='600' border='1'>
+  <tr>
+    <td>Title</td>
+    <td>Text</td>
+    <td>Action</td>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= link_to article.text, article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Destroy', article_path(article),
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New article', new_article_path %>

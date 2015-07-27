@@ -1,0 +1,84 @@
+%div
+  .main
+    .wrapper
+      .inner
+        %h1
+          = image_tag "logo.png", alt: "Cosplay No.1"
+        %p.body_copy
+          Wanna see an amazing cosplayer? Wanna join as a cosplayer?
+          %br
+          Cosplay no.1 is the App for those who love
+          %br
+          cosplaying and Otaku culture.
+          %br
+          New Cosplay No.1 has been released!
+        %p
+          = image_tag "img_iphone.png", alt: "", height: "610",  width: "376", class: "mock"
+        .download
+          = render partial: "imglink"
+  %section.content
+    .inner
+      %p.copy_text
+        A variey of cosplayers join Cosplay No.1 from all over the world.
+        %br
+        Game, Manga, Anime, Vocaloid, Moe and more.
+      %p.sub_img
+        =image_tag "img_01.jpg", alt: "", height: "453", width: "960"
+      .section_01
+        .right
+          %h2 Post your beautiful cosplay photos
+          %p Join as a cosplayer, and aim at the No.1 on ranking.
+          .download
+            = render partial: "imglink"
+        .left
+          = image_tag "img_02.jpg", alt: "", height: "394", width: "289"
+      .section_02
+        .left
+          %h2 Give Winner Point to your favorite photo
+          %p Root for cosplayers and vault them to the top rank with your winner points.
+          .download
+            = render partial: "imglink"
+        .right
+          = image_tag "img_03.jpg", alt: "", height: "392", width: "289"
+      .section_03
+        .right
+          %h2 High-ranking cosplayers can be represented on Countdown Asia
+          %p Top-ranked Cosplayers might be represented on TV which broadcasts in Thailand and Indnesia.
+          .download
+            = render partial: "imglink"
+        .left
+          = image_tag "img_04.jpg", alt: "", height: "394", width: "289"
+    %p.presskit
+      = link_to "Dowload Press Kit", root_path << "cosplay_presskit.zip"
+    .sns
+      .sns-fb
+        .fb-like{"data-action" => "like", "data-href" => "http://cosplay-no1.com/", "data-layout" => "box_count", "data-share" => "false", "data-show-faces" => "true"}
+      .sns-tw
+        %a.twitter-share-button{"data-count" => "vertical", "data-text" => "Cosplay no.1 is the App for those who love cosplaying and Otaku culture. Download and join Cosplay No.1 now!", "data-url" => "http://cosplay-no1.com/", :href => "https://twitter.com/share"} Tweet
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    .footer
+      .inner
+        .promoted
+          %p produced by
+          %ul
+            %li
+              =link_to image_tag("logo_cda.png", {alt: "Countdown Asia", height: "53", width: "87"}), "http://www.countdown.asia/", target: "_blank"
+            %li
+              =link_to image_tag("logo_tokyono1.png", {alt: "Tokyo No.1", height: "55", width: "56"}), "http://tokyo-no1.net/", target: "_blank"
+            %li
+              =link_to image_tag("logo_framgia.png", {alt: "Framgia", height: "42", width: "108"}), "http://framgia.co.jp/", target: "_blank"
+        %small.copyright
+          Copyright &copy;
+          = succeed "." do
+            %span#copyright_year
+          Published by Tokyo No.1 Inc. Developed by Framgia Inc.
+:javascript
+  (function($) {
+    $(function() {
+      var date = new Date(),
+          year = date.getFullYear();
+      $("#copyright_year").text(year);
+    });
+
+  })(jQuery);

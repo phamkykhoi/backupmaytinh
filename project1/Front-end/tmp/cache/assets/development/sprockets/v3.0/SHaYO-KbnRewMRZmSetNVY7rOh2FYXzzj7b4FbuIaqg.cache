@@ -1,0 +1,9 @@
+I"¨(function() {
+  $(function() {
+    return $('.delete_post').on('ajax:success', function() {
+      return $(this).closest('tr').fadeOut();
+    });
+  });
+
+}).call(this);
+:ET

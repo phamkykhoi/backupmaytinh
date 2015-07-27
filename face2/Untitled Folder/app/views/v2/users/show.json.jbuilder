@@ -1,0 +1,22 @@
+json.user do
+  json.name @user.name
+  json.comment @user.comment
+  json.birthday @user.birthday
+  json.user_profile_photo_url @user.profile_photo.thumb_small.try(:url)
+  json.facebook_id @user.facebook_id
+  json.facebook_token @user.facebook_token
+  json.email @user.email
+  json.followers_count @user.followers_count
+  json.followings_count @user.followings_count
+  json.supportings_count @user.supportings_count
+  json.posts_count @user.posts_count
+  json.latest_monthly_rank @user.latest_monthly_rank
+  json.followership_id current_user.followership_id_with(@user)
+  json.ticket_recover_notice @user.ticket_recover_notice
+  json.no_login_notice @user.no_login_notice
+  json.followee_posts_notice @user.followee_posts_notice
+  json.supported_notice @user.supported_notice
+  json.commented_notice  @user.commented_notice
+  json.followed_notice @user.followed_notice
+  json.bulletin_notice @user.bulletin_notice
+end

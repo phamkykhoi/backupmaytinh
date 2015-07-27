@@ -1,0 +1,48 @@
+<div class="table-responsive">
+  <h2>User Manage</h2>
+  <p class="pull-right">
+    <%= 
+      link_to new_admin_user_path do %>
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        New User
+    <% end %>
+  </p>
+  <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+    <thead>
+      <tr>
+        <th style="width:5%">
+          <input class="no-margin" type="checkbox">
+        </th>
+        <th style="width:35%">Fullname</th>
+        <th style="width:20%" class="hidden-phone">Email</th>
+        <th style="width:10%" class="hidden-phone">Address</th>
+        <th style="width:15%" class="hidden-phone">Phone</th>
+        <th style="width:15%" class="hidden-phone">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <tr>
+            <td>
+              <input class="no-margin" type="checkbox">
+            </td>
+            <td>
+              <span class="name"><%= user.fullname %></span>
+            </td>
+            <td class="hidden-phone"><%= user.email %></td>
+            <td class="hidden-phone">
+              <span class="label label label-info"><%= user.address %></span>
+            </td>
+            <td class="hidden-phone"><%= user.phone %></td>
+            <td class="hidden-phone">
+              <%= link_to "Show", admin_user_path(user) %>
+              <%= link_to "Edit", edit_admin_user_path(user) %>
+              <%= link_to "Delete", admin_user_path(user), method: :delete, data: {confirm: (I18n.t "message.confirm_delete")} %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

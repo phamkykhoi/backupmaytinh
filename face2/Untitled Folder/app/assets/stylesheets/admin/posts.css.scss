@@ -1,0 +1,36 @@
+#post-items {
+  width: 1175px;
+  margin: 0 auto;
+
+  .undisplay {
+    background-color: #999999;
+  }
+}
+
+.post-item-wrapper {
+  width: 225px;
+  height: 226px;
+  margin-right: 5px;
+  margin-left: 5px;
+  float: left;
+
+  .post-item {
+    margin: 0 auto 10px;
+    width: 59px;
+    height: 59px;
+  }
+}
+
+.pagination-wrapper {
+  text-align: center;
+}
+
+.display-toggle {
+  text-align: center
+}
+
+.violation-post {
+  .cosplay-photo-item {
+    width: 400px;
+  }
+}

@@ -1,0 +1,6 @@
+<% @users.each do |u| %>
+<p>
+	<%= u.fullname %>
+	<%= image_tag u.avarta.url if u.avarta? %>
+</p>
+<% end %>

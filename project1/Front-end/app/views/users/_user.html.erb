@@ -1,0 +1,8 @@
+<li>
+  <%= image_tag user.avatar.url, width: "100" if user.avatar %>
+  <b><%= user.fullname %></b>
+  <%= link_to "Show", user_path(user) %>
+  <%= link_to "Edit", edit_user_path(user) if current_user.admin %>
+  <%= link_to "Delete", user_path(user),  method: :delete,
+        data: {confirm: "You sure?"} if current_user.admin %>
+</li>

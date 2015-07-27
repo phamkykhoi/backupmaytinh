@@ -1,0 +1,28 @@
+<table class="table table-bordered"> 
+  <%= form_for [:admin, @question] do |f| %>
+  <div>
+    <%= render "shared/error", object: f.object %>
+  </div>
+  <tr>
+    <td><%= f.label "Categories" %></td>
+    <td>
+      <%= f.select :category_ids, Category.all.collect {|x| [x.name, x.id]}, {},
+        multiple: :true %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active" valign="middle">
+      <%= f.label "Question content" %>
+    </td>
+    <td class="col-md-9">
+      <%= f.text_area :content, class: "form-control" %>
+    </td>
+  </tr>
+  <%= f.fields_for :answers do |builder| %>
+    <%= render "answer", builder: builder %>
+  <% end %>
+  <p class="pull-right">
+    <%= f.submit %>
+  </p>
+  <% end %>
+</table>

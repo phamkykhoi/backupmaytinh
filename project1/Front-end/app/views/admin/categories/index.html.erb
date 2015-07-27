@@ -1,0 +1,23 @@
+<h1>List Categories Page</h1>
+<p align="right"><%= link_to "Category new", new_admin_category_path, class: "btn btn-primary" %></p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th width="20">ID</th>
+      <th>Category Name</th>
+      <th width="150">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |c| %>
+      <tr>
+        <td><%= c.id %></td>
+        <td><%= c.name %></td>
+        <td>
+          <%= link_to "Edit", edit_admin_category_path(c) %>
+          <%= link_to "Delete", admin_category_path(c), method: "delete", data: {confirm: "You sure?"} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

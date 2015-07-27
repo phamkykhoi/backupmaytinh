@@ -1,0 +1,11 @@
+<% if @answers != nil %>
+      <% @answers.each_with_index do |answer, index| %>
+        <div class="form-group">
+          <%= form.label "Answer #{index+1}", class: "label_answer" %>
+          <div class="input-group">
+            <%= text_area(:body, "", name: "question[answers_attributes][#{index}][body]", :class => "form-control") %>
+            <span class="input-group-addon delete_ans"><i class="glyphicon glyphicon-remove"></i></span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>

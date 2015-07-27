@@ -1,0 +1,77 @@
+source "https://rubygems.org"
+
+gem "rails", "4.1.6"
+gem "sass-rails", "~> 4.0.3"
+gem "uglifier", ">= 1.3.0"
+gem "coffee-rails", "~> 4.0.0"
+gem "jquery-rails"
+gem "turbolinks"
+gem "jbuilder", "~> 2.0"
+gem "sdoc", "~> 0.4.0", group: :doc
+gem "mysql2"
+gem "haml-rails"
+gem "bootstrap-sass",  "~> 3.2.0"
+gem "autoprefixer-rails"
+gem "devise"
+gem "mini_magick"
+gem "kaminari"
+gem "paranoia", "~> 2.0"
+gem "rmagick", require: false
+gem "rails_config"
+gem "newrelic_rpm"
+gem "trumbowyg_rails"
+gem "counter_culture"
+gem "carrierwave"
+gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4.1"
+gem "actionpack-page_caching"
+gem "fog"
+gem "whenever", require: false
+gem "bcrypt"
+gem "rpush"
+gem "delayed_job_active_record"
+gem "daemons"
+gem "geoip", "~> 1.5.0"
+gem "koala", "~> 2.0"
+gem "omniauth-facebook"
+gem "dotenv-rails"
+gem "angularjs-rails"
+gem "fastimage"
+gem "select2-rails"
+gem "foursquare2"
+gem "factual-api"
+
+group :development, :test do
+  gem "spring"
+  gem "pry-rails"
+  gem "pry-coolline"
+  gem "pry-byebug"
+  gem "pry-doc"
+  gem "awesome_print"
+  gem "hirb"
+  gem "hirb-unicode"
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "guard-rspec"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "database_cleaner"
+end
+
+group :development do
+  gem "capistrano", "~> 3.2.1"
+  gem "capistrano-rails"
+  gem "capistrano-rbenv"
+  gem "capistrano-bundler"
+  gem "capistrano3-unicorn"
+  gem "capistrano3-delayed-job", "~> 1.0"
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+group :development, :staging do
+  gem "rack-mini-profiler", require: false
+end
+
+group :production, :staging do
+  gem "unicorn"
+end

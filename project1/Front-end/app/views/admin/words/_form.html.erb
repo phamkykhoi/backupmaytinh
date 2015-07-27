@@ -1,0 +1,26 @@
+<%= form_for [:admin, @word]  do |f| %>
+  <%= render "shared/error", object: f.object %>
+  <div class="form-group">
+    <%= f.label :"Word Content" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Exam list" %>
+    <%= select("word", "category_id", Category.all.collect{|x| [x.name, x.id]},
+        {include_blank: true, selected: @word.category_id},
+        class: "form-control")
+    %>
+  </div>
+
+  <div id="answer">
+    <%= f.fields_for :answers do |builder| %>
+      <%= render "answer_field", builder: builder %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= link_to "Back", admin_words_path, class: "btn btn-danger pull-right" %>
+    <%= f.submit "Save", class: "btn btn-primary pull-right" %>
+  </div>
+<% end %>

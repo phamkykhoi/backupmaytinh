@@ -1,0 +1,40 @@
+<div class="table-responsive">
+  <h2>User Manage</h2>
+  <p class="pull-right">
+    <%= 
+      link_to new_admin_category_path do %>
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        New Category
+    <% end %>
+  </p>
+  <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+    <thead>
+      <tr>
+        <th style="width:5%">
+          <input class="no-margin" type="checkbox">
+        </th>
+        <th style="width:35%">Name</th>
+        <th style="width:35%">Count Question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @categories.any? %>
+        <% @categories.each do |category| %>
+          <tr>
+            <td>
+              <input class="no-margin" type="checkbox">
+            </td>
+            <td>
+              <span class="name"><%= category.name %></span>
+            </td>
+            <td class="hidden-phone">
+              <%= link_to "Show", admin_category_path(category) %>
+              <%= link_to "Edit", edit_admin_category_path(category) %>
+              <%= link_to "Delete", admin_category_path(category), method: :delete, data: {confirm: (I18n.t "message.confirm_delete")} %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

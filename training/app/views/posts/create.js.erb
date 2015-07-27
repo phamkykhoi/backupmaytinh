@@ -1,0 +1,6 @@
+// JS template for AJAX response used by 'create' action
+$('body')
+.html("<h1><%= j @post.title %></h1>")
+.append('<div class="center"><%= j @post.content %></div>')
+.append('<br/><br/>')
+.append('<div class="center">' + '<%= link_to 'Go to posts', posts_url %>' + '</div>');

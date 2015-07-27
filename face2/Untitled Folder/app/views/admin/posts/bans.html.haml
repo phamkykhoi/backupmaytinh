@@ -1,0 +1,11 @@
+- @posts.each do |post|
+  .violation-post
+    - post.photos.each do |photo|
+      = image_tag photo.content.thumb_small.url, class: "cosplay-photo-item"
+    = t ".bans_count"
+    = post.bans_count
+    = link_to t(".delete"), admin_post_path(post), method: :delete, data: {confirm: t(".can_you_delete")},
+        class: "btn btn-default"
+
+.pagination-wrapper
+  = paginate @posts

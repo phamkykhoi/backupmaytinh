@@ -1,0 +1,140 @@
+# Logfile created on 2015-07-03 14:43:37 +0700 by logger.rb/44203
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Environment: development
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Dispatcher: webrick
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Application: development
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing deferred Rack instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Net instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Finished instrumentation
+[07/03/15 14:43:37 +0700 framgiavn-Vostro-2420 (24053)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 14:43:44 +0700 framgiavn-Vostro-2420 (24053)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/03/15 14:43:45 +0700 framgiavn-Vostro-2420 (24053)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 14:43:45 +0700 framgiavn-Vostro-2420 (24053)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 14:54:42 +0700 framgiavn-Vostro-2420 (24053)] INFO : Starting Agent shutdown
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Environment: development
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Dispatcher: webrick
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Application: development
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing deferred Rack instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Net instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Finished instrumentation
+[07/03/15 15:10:53 +0700 framgiavn-Vostro-2420 (26376)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 15:10:54 +0700 framgiavn-Vostro-2420 (26376)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/03/15 15:10:55 +0700 framgiavn-Vostro-2420 (26376)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 15:10:55 +0700 framgiavn-Vostro-2420 (26376)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 15:17:12 +0700 framgiavn-Vostro-2420 (26376)] INFO : Starting Agent shutdown
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Environment: development
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Dispatcher: webrick
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Application: development
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing deferred Rack instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Net instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 15:18:09 +0700 framgiavn-Vostro-2420 (27482)] INFO : Finished instrumentation
+[07/03/15 15:18:10 +0700 framgiavn-Vostro-2420 (27482)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 15:19:29 +0700 framgiavn-Vostro-2420 (27482)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/03/15 15:19:30 +0700 framgiavn-Vostro-2420 (27482)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 15:19:30 +0700 framgiavn-Vostro-2420 (27482)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Environment: development
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : No known dispatcher detected.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Application: development
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing deferred Rack instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Net instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 15:31:27 +0700 framgiavn-Vostro-2420 (28913)] INFO : Finished instrumentation
+[07/03/15 16:06:04 +0700 framgiavn-Vostro-2420 (27482)] INFO : Starting Agent shutdown
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Environment: development
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Dispatcher: webrick
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Application: development
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing deferred Rack instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Net instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Finished instrumentation
+[07/03/15 16:22:58 +0700 framgiavn-Vostro-2420 (3528)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 16:23:32 +0700 framgiavn-Vostro-2420 (3528)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/03/15 16:23:33 +0700 framgiavn-Vostro-2420 (3528)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 16:23:33 +0700 framgiavn-Vostro-2420 (3528)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Reading configuration from config/newrelic.yml (/home/framgiavn/workspace/face2/cosplay_server)
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] ERROR : Failed ERB processing configuration file. This is typically caused by a Ruby error in <% %> templating blocks in your newrelic.yml file.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] ERROR : NameError: uninitialized constant NewRelic::Agent::Configuration::YamlSource::EY
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Environment: development
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : No known dispatcher detected.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Application: development
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing deferred Rack instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing middleware-based Excon instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Net instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 17:14:19 +0700 framgiavn-Vostro-2420 (11138)] INFO : Finished instrumentation

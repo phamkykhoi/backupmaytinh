@@ -1,0 +1,31 @@
+= stylesheet_link_tag "bulletins"
+%link{href: "//fonts.googleapis.com/css?family=Quicksand:300,400,700",
+  rel: "stylesheet", type: "text/css"}
+
+%div
+  = link_to t(".new_popup"), new_admin_bulletin_path, {class: "btn btn-primary"}
+%br
+%table.table.table-striped.container
+
+  %th.col-md-10
+    = t(".header_content")
+  %th.col-md-2
+  - @bulletins.each do |bulletin|
+    %tr
+      %td.col-md-10
+        %ul
+          %li
+            %dl#strech_fold
+              %dt
+                %a
+                  = scrape_headline bulletin.content
+              %dd
+                = sanitize bulletin.content
+      %td.col-md-2
+        = link_to t(".edit"), edit_admin_bulletin_path(bulletin)
+        \|
+        = link_to t(".delete"),admin_bulletin_path(bulletin) , method: :delete, data: {confirm: t(".confirm_delete")}
+
+
+.pagination-wrapper
+  = paginate @bulletins

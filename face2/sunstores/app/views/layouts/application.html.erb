@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sunstores</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if get_namespace == "admin" %>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "ADMIN SYSTEM", '#', id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Dashbroad",   '#' %></li>
+          <li><%= link_to "Question", admin_questions_path %></li>
+          <li><%= link_to "Categories", admin_categories_path %></li>
+          <li><%= link_to "Products", admin_products_path %></li>
+          <li><%= link_to "Users",   admin_users_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <% else %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "Home Page", '#', id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Dashbroad",   '#' %></li>
+          <li><%= link_to "Lesson",categories_path %></li>
+          <li><%= link_to "Users",   '#' %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <% end %>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+carrierwave_storage: file
+apns:
+  certificate_path: <%= ENV["APNS_CERTIFICATE_PATH"] %>
+  environment: sandbox
+  password: <%= ENV["APNS_PASSWORD"] %>
+gcm:
+  auth_key: <%= ENV["GCM_AUTH_KEY"] %>
+ip:
+  allows: ["59.106.111.156", "27.110.48.28"]
+base_url: ""
+expire_after_seconds: <%= 30.minutes %>
+recover_time: <%= 30.minutes %>

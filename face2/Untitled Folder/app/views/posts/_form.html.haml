@@ -1,0 +1,44 @@
+= javascript_include_tag "posts"
+
+= form_for @post do |f|
+  %div{class: "upload_container", "ng-controller" => "photoFormCtrl", "ng-init" => "init(#{@photos.to_json})"}
+    %div{class: "upload_item", "ng-repeat" => "photo in photos",
+      "on-finish-render" => "ngRepeatFinished"}
+      %p{class: "upload_main", "ng-if" => "$first"}
+        = t ".main_picture"
+      %img{class: "temporally-photo-url-{{$index}} upload_image"}
+      %label
+        = f.fields_for :photos, child_index: "{{$index}}" do |ff|
+          = ff.hidden_field :temporally_photo_url, class: "temporally-photo-url-{{$index}}", value: "{{photo.url}}"
+          = file_field_tag :content, accept: "image/*", class: "upload_file"
+          = image_tag "btn_addphoto.png", class: "upload_button upload-thumnail-{{$index}}",
+            "file-drop-zone" => "", "on-drop-files" => "addNewFiles(files, $index)"
+          = ff.text_area :description, placeholder: "#{t '.add_a_comment'}", value: "{{photo.description}}"
+  .form_container
+    .upload_form
+      %p.upload_form_title
+        = t ".category"
+      = f.collection_select :m_genre_id, M::Genre.all, :id, :name,
+        prompt: t(".choose_category")
+    .upload_form
+      %p.upload_form_title
+        = t ".tags"
+      = f.hidden_field :tag_ids, multiple: true, "data-tags" => f.object.tags.try(:to_json), value: []
+    .upload_form
+      %p.upload_form_title
+        = t ".photographer"
+      = f.hidden_field :photographer_id, "data-id" => f.object.photographer_id, "data-name" => f.object.photographer.try(:name)
+    .upload_form
+      %p.upload_form_title
+        = t ".camera"
+      = f.hidden_field :camera_id, "data-id" => f.object.camera_id, "data-name" => f.object.camera.try(:name)
+    .upload_form
+      %p.upload_form_title
+        = t ".location"
+      = f.hidden_field :location, "data-name" => f.object.location
+    .upload_button
+      %p
+        = f.check_box :download, id: "allow"
+        %label{for: "allow"}
+          = t ".allow_download"
+      = f.submit t(".send"), class: "btn submitting-post"

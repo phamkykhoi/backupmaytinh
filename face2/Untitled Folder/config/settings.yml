@@ -1,0 +1,20 @@
+returning_post_num: 20
+returning_post_num_for_admin: 150
+returning_user_num_for_admin: 200
+returning_activity_num: 20
+returning_ranking_subtotal_num: 100
+returning_supporter_ranking_num: 30
+returning_user_suggest_num: 10
+ranker_photos_num: 5
+supporter_photos_num: 5
+ios_app_name: cosplay_ios
+android_app_name: cosplay_android
+page_cache_directory: <%= "#{Rails.root.to_s}/public/cache" %>
+delayed_time_of_ranking_aggregation: <%= 2.hours %>
+month_displaying_support_subtotal: 6
+range_to_send_push_notification_for_no_login_user: <%= 3.days %>
+user_mailer:
+  email: "no-reply@cosplay-no1.com"
+no_user_name: "no user"
+facebook_app_ids: ["1705622892998551", "1578735805701226", "1506064566346014", "386749064815782"]
+geoip_location: "lib/GeoLiteCity.dat"

@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-md-1">&nbsp;</div>
+  <div class="col-md-10">
+    <p align="right">
+      <%= link_to "New Exam", new_exam_path, class: "btn btn-primary" %>
+    </p>
+    <table class="table table-bordered" align="center">
+        <thead>
+            <tr>
+                <th width="10">ID</th>
+                <th>Exam name</th>
+                <th width="150">Question Number</th>
+                <th width="80">Time</th>
+                <th width="120">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<% if defined? @exams %>
+        	<% @exams.each do |x| %>
+            <tr>
+                <td><%= x.id %></td>
+                <td><%= x.name %></td>
+                <td align="right"><%= x.questions.count %></td>
+                <td><%= x.time %>"</td>
+                <td>
+                    <%= link_to "Edit", edit_exam_path(x) %>
+                    <%= link_to 'Destroy', exam_path(x),
+                                        method: :delete,
+                                        data: { confirm: 'Are you sure?' } %>
+                </td>
+            </tr>
+            <% end %>
+            <% end %>
+        </tbody>
+    </table>
+  </div>
+  <div class="col-md-1">&nbsp;</div>
+</div>

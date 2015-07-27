@@ -1,0 +1,25 @@
+<h1>List Word Page</h1>
+<p align="right">
+  <%= link_to "Word new", new_admin_word_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered" align="center">
+  <thead>
+    <tr>
+      <th width="50">ID</th>
+      <th>Word content</th>
+      <th width="60">Edit</th>
+      <th width="60">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+      <td><%= word.id %></td>
+      <td><%= word.body %></td>
+      <td><%= link_to "Edit", edit_admin_word_path(word) %></td>
+      <td><%= link_to "Delete", admin_word_path(word),  method: :delete, data: {confirm: "You sure?"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate %>

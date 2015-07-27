@@ -1,0 +1,50 @@
+<<<<<<< HEAD
+<%= form_for [:admin, @word]  do |f| %>
+  <%= render "shared/error", object: f.object %>
+  <div class="form-group">
+    <%= f.label :"Word Content" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Exam list" %>
+=======
+<%= form_for [:admin, @word]  do |form| %>
+  <%= render "shared/error", object: form.object %>
+  <div class="form-group">
+    <%= form.label :"Word Content" %>
+    <%= form.text_area :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label "Exam list" %>
+>>>>>>> Admin manager: word and answer
+    <%= select("word", "category_id", Category.all.collect{|x| [x.name, x.id]},
+        {include_blank: true, selected: @word.category_id},
+        class: "form-control")
+    %>
+  </div>
+
+  <div id="answer">
+<<<<<<< HEAD
+    <%= f.fields_for :answers do |builder| %>
+      <%= render "answer_field", builder: builder %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= link_to "Back", admin_words_path, class: "btn btn-danger pull-right" %>
+    <%= f.submit "Save", class: "btn btn-primary pull-right" %>
+=======
+    <%= render "answer_field", answer_field: form %>
+  </div>
+
+  <div class="form-group">
+    <%= link_to "#", class: "insertanswer" do %>
+      <i class="glyphicon glyphicon-plus"></i> Insert Answer
+    <% end %>
+    <%= link_to "Back", admin_words_path, class: "btn btn-danger pull-right" %>
+    <%= form.submit "Save", class: "btn btn-primary pull-right" %>
+>>>>>>> Admin manager: word and answer
+  </div>
+<% end %>

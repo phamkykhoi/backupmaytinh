@@ -1,0 +1,15 @@
+<div class="form-group">
+  <%= builder.label "Answer #{builder.options[:child_index]+1}",
+        class: "label_answer" %>
+  <span class="pull-right">Is true 
+    <%= builder.check_box :status, class: "answer_radio" %>
+  </span>
+  <div class="input-group">
+    <%= builder.text_area :body, class: "form-control" %>
+    <%= link_to "#", class: "input-group-addon delete_ans",
+          id: "#{builder.options[:child_index]}" do %>
+        <i class="glyphicon glyphicon-remove"></i>
+    <% end %>
+  </div>
+</div>
+<%= builder.hidden_field(:_destroy) %>

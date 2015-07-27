@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-3">
+    <p align="center">
+      <%= image_tag @user.avatar.url, width: "100" if @user.avatar %>
+      <div style="text-align:center;"><%= @user.fullname %></div>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+    </p>
+  </div>
+  <div class="col-md-9">
+    <%= render 'users/follow_form' if logged_in? %>
+    <h1 align="left">
+      <%= link_to "#" do %>
+        <span class="label label-default">Words</span>
+      <% end %>
+      <%= link_to "#", class: "lesson" do %>
+        <span class="label label-default">Lesson</span>
+      <% end %>
+    </h1>
+    <br/>
+    <h3>Activities<hr/></h3>
+    <% if @lesson_categories.any? %>
+      <ul class="lesson-categories">
+        <% @lesson_categories.each do |lesson_category| %>
+          <li>
+            <h4>Leanned: <%= lesson_category.name %><h4>
+            <small>
+              Correct: <%= lesson_category.count_correct %>/20
+            </small>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

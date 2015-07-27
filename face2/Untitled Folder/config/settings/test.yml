@@ -1,0 +1,11 @@
+carrierwave_storage: file
+apns:
+  certificate_path:
+  environment: sandbox
+  password:
+gcm:
+  auth_key:
+ip:
+  allows: ["59.106.111.156", "27.110.48.28"]
+expire_after_seconds: <%= 3.days %>
+recover_time: <%= 96.minutes %>

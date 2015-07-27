@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Cosplay
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
+
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv.js"
+
+    = stylesheet_link_tag "admin", :media => "all", "data-turbolinks-track" => true
+    = javascript_include_tag "admin", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle{:type => "button", :data => {:toggle => "collapse", :target => ".navbar-collapse"} }
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "Cosplay No.1", admin_root_path(q: {}), class: "navbar-brand"
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to t(".players"), admin_users_path
+            %li
+              = link_to t(".push_notification"), admin_notifications_path
+            %li
+              = link_to t(".violation"), admin_posts_path(template: "bans")
+            %li
+              = link_to t(".bullentin"), admin_bulletins_path
+
+    .container
+      - flash.each do |name, msg|
+        = content_tag :div, :class => "alert alert-#{name == :error ? "danger" : "success" } alert-dismissable" do
+          %button.close{:type => "button", :data => {:dismiss => "alert"}, :aria => {:hidden => "true"} } &times;
+          = msg
+      = yield

@@ -1,0 +1,9 @@
+<h1><%= @category.name %></h1>
+<%= form_for [@category,@lesson] do |f| %>
+  <% @questions.each do |question| %>
+  	<%= question.content %><br/>
+  		<% question.answers.each do |answer| %>
+  			<p><%= answer.body %></p>
+  		<% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>List User Page</h1>
+<p align="right"><%= link_to "New User", new_user_path, class: "btn btn-primary" %></p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fullname</th>
+      <th>Email</th>
+      <th width="150">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.id %></td>
+        <td><%= u.fullname %></td>
+        <td><%= u.email %></td>
+        <td>
+          <%= link_to "Show", user_path(u) %>
+          <%= link_to "Edit", edit_user_path(u) %>
+          <%= link_to "Delete", user_path(u),  method: :delete,
+                data: {confirm: "You sure?"} if current_user.admin %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,57 @@
+ja:
+  layouts:
+    admin:
+      push_notification: Push通知
+      violation: 違反報告
+      players: プレイヤー一覧
+      bullentin: お知らせ
+  admin:
+    posts:
+      index:
+        post_with_deleted_count: 総投稿件数
+        post_count: 表示中の投稿件数
+        post_only_deleted_count: 非表示の投稿件数
+        can_you_change_to_undisplay: 非表示にしてもよろしいでしょうか？
+        can_you_change_to_display: 表示にしてもよろしいでしょうか？
+        undisplay: 非表示
+        display: 表示
+        download: ダウンロード
+        created_by: "投稿者:"
+      bans:
+        bans_count: 報告回数
+        delete: 削除
+        can_you_delete: 削除してもよろしいでしょうか？
+    notifications:
+      index:
+        content: 内容
+        send: 送信
+        can_you_send: 送信にしてもよろしいでしょうか？
+    users:
+      index:
+        player_total: 総プレイヤー数
+        post_total: 総投稿数
+        post_count: 投稿回数
+        name: 名前
+        id: ユーザーID
+        name_or_id: 名前 or ユーザーID
+        setting_button: 設定ボタン
+        to_default_profile_photo: デフォルトのプロフィール画像に変更
+        confirm_changing_to_default_profile_photo: プロフィール画像を変更してもよろしいでしょうか？
+    bulletins:
+      index:
+        new_popup: お知らせ作成
+        header_content: お知らせ一覧
+        edit: 編集
+        delete: 削除
+        confirm_delete: 削除してもよろしいですか。
+      form:
+        cancel: キャンセル
+        submit: 送信
+        confirm_submit: 送信してもよろしいですか。
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前ページ"
+      next: "次のページ &rsaquo;"
+      truncate: "&hellip;"

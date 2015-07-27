@@ -1,0 +1,33 @@
+.well
+  %h3
+    = t ".post_with_deleted_count"
+    \:
+    = Post.with_deleted.count
+  %h3
+    = t ".post_count"
+    \:
+    = Post.count
+  %h3
+    = t ".post_only_deleted_count"
+    \:
+    = Post.only_deleted.count
+
+#post-items{data: {:"no-turbolink" => true}}
+  - @posts.each do |post|
+    %div{class: "post-item-wrapper well #{post.deleted_at ? "undisplay" : "" }"}
+      %div
+        = t ".created_by"
+        = User.with_deleted.find(post.user_id).name
+      .cosplay-photo
+        - post.photos.with_deleted.each do |photo|
+          = link_to photo.content.url, :"data-lightbox" => photo.id, :"data-btn" => t(".download"), :"data-download_link" => admin_photo_path(photo) do
+            = image_tag photo.content.thumb_small.url, class: "post-item"
+      .display-toggle
+        - if post.deleted_at
+          = link_to t(".display"), admin_post_path(post, _restore: true),
+            method: :patch, data: {confirm: t(".can_you_change_to_display")}, class: "btn btn-default"
+        - else
+          = link_to t(".undisplay"), admin_post_path(post), method: :delete, data: {confirm: t(".can_you_change_to_undisplay")}, class: "btn btn-default"
+  .clearfix
+  .pagination-wrapper
+    = paginate @posts

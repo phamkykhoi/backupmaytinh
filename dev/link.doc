@@ -1,0 +1,57 @@
+﻿Form Assignment
+https://docs.google.com/forms/d/1jD2NgLM2qJUEFpg8Ei6Od0NXVz_pm9b8FMf9jsA6N10/viewform
+
+
+
+Report
+https://docs.google.com/spreadsheets/d/18gzP8Y7H1ulP7Dh-uoFPlnkEVDC_nabxgMQuWH7HFBY/edit#gid=0
+
+
+Report trainee
+https://docs.google.com/spreadsheets/d/1m4ddMLMnIEbAgTgbWxDYARJNVFpweCrwipIzMWV8kzA/edit#gid=0
+
+
+Training Assignment
+https://docs.google.com/spreadsheets/d/1XbkDpt5bEOO3-2RStY5ZSJ15PA43uxdR871eaLUZaL0/edit#gid=723169876
+
+
+Schedule
+https://docs.google.com/spreadsheets/d/1tjckNY1JetXL2794zZmq6d-qWWmJlF5Ouk_arkunXNo/edit#gid=1
+
+
+Test Rails
+
+[To:1385248] Le Thuong Quan
+[To:1385456] Nguyen Van Truong
+[To:1385257] Pham Thi Thu Trang
+[To:1385558] Vu Minh Duc
+[To:1385463] Nguyen Tuan Toan
+[To:1385726] Do Tuan Minh
+[To:1385671] Pham Huy Cuong
+[To:1385263] Plachy Michal
+[To:1385265] Luu Hoang Truc
+
+[Blog system requirements]
+User
+- can sign-up
+- can sign-in/sign-out
+- can create a entry (display title, body, date)
+- can make a comment on a entry (of owner and followed user) (display comment, name and date)
+- can follow other users
+- can see the latest entries which are posted by following users (with pagination)
+Everyone (including no sign-in user)
+- can read all posts and their comments (with pagination)
+- cannot make a comment
+The model names you must use
+- User
+- Entry
+- Comment
+- other model (if you need)
+Your system
+- is deployed on Heroku
+Your code
+- is uploaded on Github
+
+
+/bin/bash –login
+https://viblo.asia/cuongnv_540/posts/zoZVRgBLvmg5

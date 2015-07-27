@@ -1,0 +1,61 @@
+<% if defined? @user %>
+	<div class="col-md-4" >
+		<h4>Avata</h4>
+		<%= image_tag @user.avarta.url if @user.avarta? %>
+		<br/>
+
+		<% @user ||= current_user %>
+		<div class="stats">
+		  <a href="<%= following_user_path(@user) %>">
+		    <strong id="following" class="stat">
+		      <%= @user.following.count %>
+		    </strong>
+		    following
+		  </a>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <a href="<%= followers_user_path(@user) %>">
+		    <strong id="followers" class="stat">
+		      <%= @user.followers.count %>
+		    </strong>
+		    followers
+		  </a>
+		</div>
+
+		<%= render("block/micropost_form") %>
+	</div>
+	<div class="col-md-8" >
+		<% unless current_user?(@user) %>
+		  <div id="follow_form">
+		 
+		  </div>
+		<% end %>
+	  <h4><%= @user.fullname %></h4>
+	  <table class="table table-striped">
+		  <tbody>
+		    <tr>
+		      <td>Email</td>
+		      <td><%= @user.email %></td>
+		    </tr>
+		    <tr>
+		      <td>Address</td>
+		      <td><%= @user.address %></td>
+		    </tr>
+		    <tr>
+		      <td>Phone</td>
+		      <td><%= @user.phone %></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+
+		<p align="right"><%= link_to "Back", users_path %></a>
+	</div>
+<% else %>
+	<h3>User Undefine</h3>
+<% end %>

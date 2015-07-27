@@ -1,0 +1,12 @@
+<tr>
+  <td class="field-label col-xs-3 active" valign="middle">
+    <%= builder.label "Answer Content #{builder.index + 1}" %>
+  </td>
+  <td class="col-md-6">
+    <%= builder.text_area :body, class: "form-control" %>
+  </td>
+  <td class="col-md-3">
+  	<%= builder.check_box :status %>
+  	 Delete: <%= builder.check_box :_destroy %>
+  </td>
+</tr>

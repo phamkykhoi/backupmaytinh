@@ -1,0 +1,11 @@
+- content_for :meta_og do
+  %meta{charset: "utf-8"}
+  %meta{property: "og:title", content: "Cosplay No.1"}
+  %meta{property: "og:type", content: "website"}
+  %meta{property: "og:url", content: "#{Settings.base_url + post_path(@post)}"}
+  %meta{property: "og:image", content: "#{@post.photos.with_main.content.thumb_small.url}"}
+  - @post.photos.without_main.each do |photo|
+    %meta{property: "og:image", content: "#{photo.content.thumb_small.url}"}
+  %meta{property: "og:description", content: "Cosplay no.1 is the App for those who love cosplaying and Otaku culture. Download and join Cosplay No.1 now!"}
+  %meta{property: "og:site_name", content: "Cosplay No.1"}
+  %meta{"http-equiv" => "refresh", content: "0;URL='http://#{Settings.domain}'"}

@@ -1,0 +1,9 @@
+<%= form_for [:admin, @category] do |form| %>
+	<%= render "shared/error", object: form.object %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  
+  <%= form.submit class: "btn btn-info" %>
+<% end %>

@@ -1,0 +1,87 @@
+<table class="table table-bordered"> 
+  <%= form_for [:admin, @user] do |f| %>
+  <div>
+    <%= render "shared/error", object: f.object %>
+  </div>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :role %>
+    </td>
+    <td class="col-md-9">
+      <%= f.select :role do %>
+        <% [['Administrator', 1], ['Member', 2]].each do |c| %>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :fullname %>
+    </td>
+    <td class="col-md-9">
+      <%= f.text_field :fullname, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :email %>
+    </td>
+    <td class="col-md-9">
+      <%= f.text_field :email, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :password %>
+    </td>
+    <td class="col-md-9">
+      <%= f.password_field :password, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :password_confirmation %>
+    </td>
+    <td class="col-md-9">
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :address %>
+    </td>
+    <td class="col-md-9">
+      <%= f.text_field :address, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :phone %>
+    </td>
+    <td class="col-md-9">
+      <%= f.text_field :phone, class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :gender %>
+    </td>
+    <td class="col-md-9">
+      <%= f.radio_button :gender, '1', checked: true %> Male
+      <%= f.radio_button :gender, '2'%> Famale
+    </td>
+  </tr>
+  <tr>
+    <td class="field-label col-xs-3 active">
+      <%= f.label :avata %>
+    </td>
+    <td class="col-md-9">
+      <%= f.file_field :avata %>
+    </td>
+  </tr>
+  <p class="pull-right">
+    <%= f.submit %>
+  </p>
+  <% end %>
+</table>

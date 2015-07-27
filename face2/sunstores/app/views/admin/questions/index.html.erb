@@ -1,0 +1,40 @@
+<div class="table-responsive">
+  <h2>User Manage</h2>
+  <p class="pull-right">
+    <%= 
+      link_to new_admin_question_path do %>
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        New Question
+    <% end %>
+  </p>
+  <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+    <thead>
+      <tr>
+        <th style="width:5%">
+          <input class="no-margin" type="checkbox">
+        </th>
+        <th style="width:35%">Content</th>
+        <th style="width:15%" class="hidden-phone">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @questions.any? %>
+        <% @questions.each do |question| %>
+          <tr>
+            <td>
+              <input class="no-margin" type="checkbox">
+            </td>
+            <td>
+              <span class="name"><%= question.content %></span>
+            </td>            
+            <td class="hidden-phone">
+              <%= link_to "Show", admin_question_path(question) %>
+              <%= link_to "Edit", edit_admin_question_path(question) %>
+              <%= link_to "Delete", admin_question_path(question), method: :delete, data: {confirm: (I18n.t "message.confirm_delete")} %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

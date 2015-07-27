@@ -1,0 +1,37 @@
+<nav>
+  <ul class="nav navbar-nav navbar-right">
+    <% if logged_in? %>
+      <% if current_user.admin %>
+        <li><%= link_to "User manager", admin_users_path %></li>
+        <li><%= link_to "Word manager", admin_words_path %></li>
+        <li><%= link_to "Category manager", admin_categories_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= current_user.fullname %><b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", edit_admin_user_path(current_user.id) %></li>
+            <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Word list", words_path %></li>
+        <li><%= link_to "Categries", root_path %></li>
+        <li><%= link_to "Lesson", root_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= current_user.fullname %><b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", edit_user_path(current_user.id) %></li>
+            <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+          </ul>
+        </li>
+      <% end %>
+    <% else %>
+      <li><%= link_to "Login", login_path %></li>
+      <li><%= link_to "Sign up", signup_path %></li>
+    <% end %>
+  </ul>
+</nav>

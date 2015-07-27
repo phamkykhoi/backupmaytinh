@@ -1,0 +1,47 @@
+.well
+  %h3
+    = t ".player_total"
+    \:
+    = User.count
+  %h3
+    = t ".post_total"
+    \:
+    = Post.count
+
+= search_form_for @search, url: admin_users_path do |f|
+  = f.search_field :name_or_string_id_cont, placeholder: t(".name_or_id")
+  = f.submit class: "btn"
+%p
+  = t ".sort_by"
+  = sort_link @search, :posts_count, t(".post_count")
+
+%table.table.table-striped
+  %th
+    = t ".id"
+  %th
+    = t ".name"
+  %th
+    = t ".post_count"
+  %th
+    = t ".facebook_link"
+  %th
+    = t ".setting_button"
+  - @users.each do |user|
+    %tr
+      %td
+        = user.id
+      %td
+        = image_tag user.profile_photo.thumb_small.url, class: "profile-photo"
+        = remove_invalid_byte(user.name)
+      %td
+        = user.posts_count
+      %td
+        = link_to_facebook user.facebook_id if user.facebook_id.present?
+      %td
+        = form_for [:admin, user] do |f|
+          = hidden_field_tag :default_profile_photo, value: true
+          = f.submit t(".to_default_profile_photo"), class: "btn btn-info",
+            data: {confirm: t(".confirm_changing_to_default_profile_photo")}
+
+.pagination-wrapper
+  = paginate @users

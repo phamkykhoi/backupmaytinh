@@ -1,0 +1,21 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= image_tag @user.avatar.url, width: "100" if @user.avatar %>
+      <p><b><%= @user.fullname %><b></p>
+      <span><%= link_to "view my profile", @user %></span>
+    </section>
+    <section class="stats" style="padding-left: 70px;">
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="users follow">
+        <%= render @users %>
+      </ul>
+    <% end %>
+  </div>
+</div>

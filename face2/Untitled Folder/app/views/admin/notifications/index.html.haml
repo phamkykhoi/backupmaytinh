@@ -1,0 +1,19 @@
+.row.col-md-12
+  %table.table.table-bordered
+    %thead
+      %tr
+        %td.text-center
+          %h4
+            = t(".content")
+    %tbody
+      - @notifications.each do |notification|
+        %tr
+          %td
+            = notification.content
+  .pagination-wrapper
+    = paginate @notifications
+
+.row.col-md-12
+  = form_for [:admin, @notification] do |f|
+    = f.text_field :content, class: "col-md-11"
+    = f.submit t(".send"), class: "btn btn-notification-submit", data: {confirm: t(".can_you_send")}

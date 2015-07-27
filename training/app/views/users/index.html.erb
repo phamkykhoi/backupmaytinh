@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-md-1">&nbsp;</div>
+  <div class="col-md-10">
+    <table class="table table-bordered" align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fullname</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        		<% if defined? @users %>
+        		<% @users.each do |u| %>
+            <tr>
+                <td><%= u.id %></td>
+                <td><%= u.fullname %></td>
+                <td><%= u.email %></td>
+                <td><%= u.phone %></td>
+            </tr>
+            <% end %>
+            <% end %>
+        </tbody>
+    </table>
+  </div>
+  <div class="col-md-1">&nbsp;</div>
+</div>
+<a href="#" onclick="paintIt(this ,'#990000')">Paint it red</a>
+<a href="#" onclick="paintIt(this, '#009900')">Paint it green</a>

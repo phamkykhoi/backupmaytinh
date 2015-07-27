@@ -1,0 +1,43 @@
+<%= form_for(words_path, method: "get") do |f| %>
+
+  <div class="col-md-2">
+    <%= select_tag "category_id",
+          options_from_collection_for_select(@categories, "id", "name"),
+          include_blank: "All"
+    %>
+  </div>
+
+   <div class="col-md-2">
+    <%= f.label class: "radio" do %>
+      <%= radio_button_tag("status", 'leanned') %>Leanned
+    <% end %>
+  </div>
+
+   <div class="col-md-2">
+    <%= f.label class: "radio" do %>
+      <%= radio_button_tag("status", 'notlean') %>Not lean
+    <% end %>
+  </div>
+
+   <div class="col-md-1">
+    <%= f.label class: "radio" do %>
+      <%= radio_button_tag("status", '') %>All
+    <% end %>
+  </div>
+
+  <%= f.submit "Search", class: "btn btn-primary" %>
+
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <% if @words.any? %>
+      <% @words.each do |w| %>
+        <tr>
+          <td><%= w.word_name %></td>
+          <td><%= w.answer_name %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

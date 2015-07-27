@@ -1,0 +1,11 @@
+<%  if @categories.any? %>
+	<%= form_tag(new_lesson_path, method: "get") do %>
+  	<% @categories.each do |category| %>
+    	  <%= check_box_tag 'category_id', category.id %>
+      	<%= category.name %>
+      	<br/>
+  	<% end %>
+  	<br/>
+  	<%= submit_tag("Submit") %>
+	<% end %>
+<% end %>

@@ -1,0 +1,13 @@
+carrierwave_storage: fog
+apns:
+  certificate_path: <%= ENV["APNS_CERTIFICATE_PATH"] %>
+  environment: sandbox
+  password: <%= ENV["APNS_PASSWORD"] %>
+gcm:
+  auth_key: <%= ENV["GCM_AUTH_KEY"] %>
+ip:
+  allows: ["54.251.141.1", "54.251.161.122"]
+domain: cosplay-no1.com
+base_url: http://cosplay.framgia.vn
+expire_after_seconds: <%= 2.days %>
+recover_time: <%= 30.minutes %>

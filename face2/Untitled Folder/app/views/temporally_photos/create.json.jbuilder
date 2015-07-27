@@ -1,0 +1,1 @@
+json.temporally_photo_url @temporally_photo_url

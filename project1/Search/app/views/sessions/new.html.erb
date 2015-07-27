@@ -1,0 +1,19 @@
+<div class="col-sm-6 col-md-4 col-md-offset-4">
+  <div class="account-wall">
+    <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" >
+    <%= form_for(:session, url: login_path, html: {class: "form-signin"}) do |f| %>
+      <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+      <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+      
+      <div style="padding-left: 25px;">
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+            <span>Remember me on this computer</span>
+        <% end %>
+      </div>
+
+      <%= f.submit 'Login', class: "btn btn-lg btn-primary btn-block"  %> 
+    <% end %>
+  </div>
+  <%= link_to "Create an account", signup_path, class: "text-center new-account" %>
+</div>

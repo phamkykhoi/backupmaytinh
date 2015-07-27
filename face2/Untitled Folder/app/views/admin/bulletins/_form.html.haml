@@ -1,0 +1,9 @@
+= stylesheet_link_tag "bulletins"
+%link{href: "//fonts.googleapis.com/css?family=Quicksand:300,400,700",
+  rel: "stylesheet", type: "text/css"}
+
+.row.col-md-12
+  = form_for [:admin, @bulletin] do |f|
+    = f.text_area( :content, class: "form-control", rows: 20)
+    = link_to t(".cancel"), admin_bulletins_path, {class: "btn btn-default"}
+    = f.submit t(".submit"), class: "btn btn-primary", data: {confirm: t(".confirm_submit")}

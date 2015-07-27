@@ -1,0 +1,47 @@
+en:
+  errors:
+    can_not_be_same_follower: can't be same follower
+    can_not_be_same_followee: can't be same followee
+    fail_creating_post: Fail creating post
+  increase_ticket: You've got %{increase_ticket} winner points! Give your winner point to your favorite cosplayer.
+  ticket_recover_notice: Your winner is full! Do you want to check new photos now?
+  no_login_notice: There're many new posts in CosplayNo1. Do you want to check them now?
+  successes:
+    posting_photo: Success posting photo
+  admin:
+    cosplay_photos:
+      index:
+        can_you_change_to_undisplay: Can you change to undisplay?
+    users:
+      index:
+        sort_by: Sort By
+  user_mailer:
+    reset_password:
+      subject: Reset your Cosplay No.1 Password
+  posts:
+    form:
+      send: Post Photo
+      fail_uploading: Fail uploading
+      category: Category
+      tags: Tags
+      photographer: Photographer
+      camera: Camera
+      location: Location
+      allow_download: Allow Download
+      main_picture: Main Picture
+      add_a_comment: Add a comment
+      choose_category: Choose category
+  sign_in:
+    failure: Invalid email/password combination
+    need_sign_up: Need sign up
+  layouts:
+    navbar:
+      upload: Upload
+      login: Login
+      logout: Log out
+  sessions:
+    new:
+      email_address: Email Address
+      password: Password
+      recommend_app: if you don't have cosplay no.1 account yet, sign up with mobile app.
+      login: Login

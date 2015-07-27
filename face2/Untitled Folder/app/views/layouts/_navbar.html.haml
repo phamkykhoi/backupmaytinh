@@ -1,0 +1,17 @@
+%header
+  %p.logo
+    = link_to root_path do
+      = image_tag "logo_header.png", alt: "", height: "26", width: "94"
+  - if signed_in?
+    %ul.gNav
+      %li
+        = link_to t(".upload"), new_post_path,
+          class: selected_item_class(new_post_path)
+    .user
+      = image_tag current_user.profile_photo, alt: "", width: "36", height: "36", class: "usericon"
+      %ul.submenu
+        %li
+          = link_to t(".logout"), sign_out_path, method: :delete
+  - else
+    %p.login_button
+      = link_to t(".login"), sign_in_path

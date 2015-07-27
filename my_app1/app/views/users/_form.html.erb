@@ -1,0 +1,43 @@
+
+<%= form_for @user do |form| %>
+  <div class="form-group">
+    <%= form.label :fullname %>
+    <%= form.text_field :fullname, class: 'form-control'  %>
+  </div>
+      
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.file_field :avarta, accept: 'image/jpeg,image/gif,image/png' %>
+  </div>
+
+  <%= form.hidden_field :lock_version %>
+
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-primary' %>
+    <%= link_to "Back User", users_path, { :title => "Back User", :class => "btn btn-danger" }  %>
+  </div>
+<% end %>

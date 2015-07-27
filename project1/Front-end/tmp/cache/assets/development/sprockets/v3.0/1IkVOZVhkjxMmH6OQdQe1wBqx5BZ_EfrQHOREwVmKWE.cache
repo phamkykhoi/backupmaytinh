@@ -1,0 +1,7 @@
+I"l(function() {
+  $(function() {
+    return $('.answer_radio').on('ajax:success');
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+<div class="form-group">
+  <%= builder.label "Answer #{builder.options[:child_index]+1}",
+        class: "label_answer" %>
+  <span class="pull-right">Is true 
+    <%= builder.check_box :status, class: "answer_radio" %>
+  </span>
+  <div class="input-group">
+    <%= builder.text_area :body, class: "form-control" %>
+    <%= link_to "#", class: "input-group-addon delete_ans",
+          id: "#{builder.options[:child_index]}" do %>
+        <i class="glyphicon glyphicon-remove"></i>
+    <% end %>
+  </div>
+</div>
+<%= builder.hidden_field(:_destroy) %>
+=======
+<%= answer_field.fields_for :answers do |fb| %>
+  <div class="form-group">
+    <%= fb.label "Answer #{fb.options[:child_index]+1}", class: "label_answer" %>
+    <span class="pull-right">Is true 
+      <%= fb.check_box :status, class: "answer_radio" %>
+    </span>
+    <div class="input-group">
+      <%= fb.text_area :body, class: "form-control" %>
+      <%= link_to "#", class: "input-group-addon delete_ans",
+            id: "#{fb.options[:child_index]}" do %>
+          <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+    </div>
+  </div>
+  <%= fb.hidden_field(:_destroy) %>
+<% end %>
+>>>>>>> Admin manager: word and answer

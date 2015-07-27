@@ -1,0 +1,23 @@
+.wrap
+  %p.login_logo
+    = image_tag "logo.png", alt: "", height: "95", width: "345"
+  = form_for :session, url: sessions_path do |f|
+    .login_form
+      %p
+        = f.text_field :email, placeholder: t(".email_address")
+      %p
+        = f.password_field :password, placeholder: t(".password")
+    .login_button
+      %p
+        %button{type: "submit"}
+          = t(".login")
+      %p
+        = link_to "/auth/facebook" do
+          = image_tag "button_login_fb.png", alt: "", height: "50", width: "400"
+  %p.login_note
+    = t(".recommend_app")
+  .login_store
+    = link_to "https://itunes.apple.com/jp/app/cosplay-no.1/id953760018?mt=8", target: "_blank", class: "appstore" do
+      = image_tag "btn_appstore.png", alt: "", height: "60", width: "200"
+    = link_to "https://play.google.com/store/apps/details?id=com.framgia.cosplay", target: "_blank", class: "googleplay" do
+      = image_tag "btn_googleplay.png", alt: "", height: "60", width: "200"
